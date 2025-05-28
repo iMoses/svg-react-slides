@@ -4,101 +4,10 @@
     <meta charset="utf-8" />
     <title>Drawing Data with React and SVG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
-
-    <link rel="stylesheet" href="/css/theme.css" />
-    <link rel="stylesheet" href="/css/atom-one-dark.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div class="reveal">
-      <div class="slides">
-        <section>
-          <h2>LineChart Component</h2>
-          <pre><code class="language-jsx" data-trim data-line-numbers="1-54|10-12|14-16|18-21|24-41|45-54">
-import { extent, scaleLinear } from &quot;d3&quot;;
-import styled from &quot;styled-components&quot;;
-
-export default function LineChart(&#123;
-  data,
-  width = 450,
-  height = 200,
-  padding = 10,
-&#125;) &#123;
-  const scaleX = scaleLinear()
-    .domain(extent(data.map((d) =&gt; d.year)))
-    .rangeRound([padding, width - padding * 2]);
-
-  const scaleY = scaleLinear()
-    .domain(extent(data.map((d) =&gt; d.sales)))
-    .rangeRound([height - padding * 2, padding]);
-
-  const points = data.map((d) =&gt; [
-    scaleX(d.year),
-    scaleY(d.sales)
-  ]);
-
-  return (
-    &lt;svg width=&#123;width&#125; height=&#123;height&#125;&gt;
-      &lt;polyline
-        points=&#123;points.join(&quot; &quot;)&#125;
-        fill=&quot;none&quot;
-        stroke=&quot;steelblue&quot;
-        strokeWidth=&quot;2&quot;
-      /&gt;
-      &#123;points.map(([cx, cy], i) =&gt; (
-        &lt;Marker
-          key=&#123;i&#125;
-          cx=&#123;cx&#125;
-          cy=&#123;cy&#125;
-          onClick=&#123;() =&gt; &#123;
-            console.log(&quot;click!&quot;, data[i]);
-          &#125;&#125;
-        /&gt;
-      ))&#125;
-    &lt;/svg&gt;
-  );
-&#125;
-
-const Marker = styled.circle`
-  transition: r 200ms, fill 200ms;
-  fill: maroon;
-  r: 3;
-
-  :hover &#123;
-    fill: magenta;
-    r: 6;
-  &#125;
-`;
-  </code></pre>
-        </section>
-        <section>
-          <pre><code class="language-js fragment"></code></pre>
-        </section>
-        <section>
-          <section
-            data-markdown="/slides/talk.md"
-            data-separator="^\n---\n"
-            data-separator-vertical="^\n--\n"
-            data-separator-notes="^Note:"
-            data-charset="utf-8"
-          ></section>
-        </section>
-      </div>
-    </div>
-
-    <script type="module">
-      import Reveal from "reveal.js";
-      import RevealMarkdown from "reveal.js/plugin/markdown/markdown.js";
-      import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
-      import RevealNotes from "reveal.js/plugin/notes/notes.js";
-
-      Reveal.initialize({
-        controls: false,
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-        // showNotes: true,
-      });
-    </script>
+    <div id="root" class="reveal"></div>
+    <script type="module" src="/src/Main.jsx"></script>
   </body>
 </html>
