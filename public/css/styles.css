@@ -2,13 +2,20 @@
 @import "atom-one-dark.css";
 @import "theme.css";
 
-.reveal pre {
-  font-size: 0.26em;
-}
+.reveal {
+  pre {
+    font-size: 0.26em;
+  }
 
-.reveal svg {
-  position: absolute;
-  right: 2.5%;
-  bottom: 0;
-  background-color: #fff;
+  output {
+    position: absolute;
+    right: 2.5%;
+    bottom: 0;
+    padding: 6px 12px;
+    background-color: #fff;
+  }
+  output:where(*) {
+    font: initial;
+    color: initial;
+  }
 }

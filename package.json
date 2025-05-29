@@ -10,11 +10,16 @@
     "build": "echo 'Nothing to build!'"
   },
   "dependencies": {
+    "@tippyjs/react": "^4.2.6",
     "d3": "^7.9.0",
+    "d3-array": "^3.2.4",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "reveal.js": "^5.2.1",
-    "styled-components": "^6.1.18"
+    "styled-components": "^6.1.18",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.5.0",
