@@ -5,7 +5,7 @@ export function NumberGenerator({
   start = 0,
   end = 1,
   round = false,
-  interval = 3000,
+  interval = 2000,
   children,
 }) {
   const [value, setValue] = useState(start);
