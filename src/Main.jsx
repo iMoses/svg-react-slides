@@ -93,10 +93,7 @@ function Main() {
               </code>
             </pre>
             <output>
-              <LineChart03
-                data={dataset1}
-                onClick={(datum) => alert(JSON.stringify(datum, null, 2))}
-              />
+              <LineChart03 data={dataset1} />
             </output>
           </section>
 
@@ -132,7 +129,7 @@ function Main() {
             </code>
           </pre>
           <output className="fragment">
-            <NumberGenerator end={100}>
+            <NumberGenerator end={100} round>
               {(value) => <GaugeChart value={value} label="Benchmark" />}
             </NumberGenerator>
           </output>

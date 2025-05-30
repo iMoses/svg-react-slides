@@ -1,44 +1,31 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { easeInOut } from "./easings";
 
-export function useSmoothTransition(targetValue, options = {}) {
-  const { duration = 200, easing = (t) => t } = options;
-
+export function useSmoothTransition(
+  targetValue,
+  duration = 600,
+  easing = easeInOut,
+) {
   const [currentValue, setCurrentValue] = useState(targetValue);
-  const startValueRef = useRef(targetValue);
-  const startTimeRef = useRef(performance.now());
 
   useEffect(() => {
     if (targetValue === currentValue) return;
 
-    startValueRef.current = currentValue;
-    startTimeRef.current = performance.now();
+    const startValue = currentValue;
+    const startTime = performance.now();
+    let rafId = requestAnimationFrame(function step(now) {
+      const elapsed = now - startTime;
 
-    const step = (now) => {
-      const elapsed = now - startTimeRef.current;
-
-      if (elapsed >= duration) {
-        return setCurrentValue(targetValue);
+      if (elapsed < duration) {
+        const delta = easing(Math.min(elapsed / duration, 1));
+        setCurrentValue(startValue + (targetValue - startValue) * delta);
+        rafId = requestAnimationFrame(step);
+      } else {
+        setCurrentValue(targetValue);
       }
+    });
 
-      const nextValue =
-        startValueRef.current +
-        (targetValue - startValueRef.current) *
-          easing(Math.min(elapsed / duration, 1));
-
-      if (nextValue !== currentValue) {
-        setCurrentValue(nextValue);
-      }
-
-      rafId = requestAnimationFrame(step);
-    };
-
-    let rafId = requestAnimationFrame(step);
-
-    return () => {
-      if (rafId != null) {
-        cancelAnimationFrame(rafId);
-      }
-    };
+    return () => cancelAnimationFrame(rafId);
   }, [targetValue, duration, easing]);
 
   return currentValue;

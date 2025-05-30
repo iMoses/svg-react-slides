@@ -4,7 +4,7 @@ import { useSmoothTransition } from "./useSmoothTransition";
 export function NumberGenerator({
   start = 0,
   end = 1,
-  round = true,
+  round = false,
   interval = 3000,
   children,
 }) {
@@ -16,7 +16,7 @@ export function NumberGenerator({
     const timerId = setInterval(() => setValue(rand()), interval);
     setValue(rand());
     return () => clearInterval(timerId);
-  }, [start, end, interval, children]);
+  }, [start, end, interval]);
 
   return children(round ? Math.round(animatedValue) : animatedValue);
 }
