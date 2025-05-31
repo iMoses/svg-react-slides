@@ -7,17 +7,19 @@ export function Chapter02() {
     <section>
       <section>
         <h2>What is SVG?</h2>
-        <p>
-          Scalable Vector Graphics - a markup format for vector-based graphics
-          in the browser.
-        </p>
+        <h3>Scalable Vector Graphics</h3>
+        <p>A markup format for vector-based graphics</p>
       </section>
       <section>
         <h2>SVG Shapes</h2>
-        <Code className="language-svg" data-trim>
+        <Code
+          className="language-svg"
+          data-line-numbers="1-19|5|7|9|11|13|15|17|3|1"
+          data-trim
+        >
           {SvgShapesRaw}
         </Code>
-        <output className="fragment">
+        <output>
           <SvgShapes width={180} height={180} />
         </output>
       </section>

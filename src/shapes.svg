@@ -14,6 +14,6 @@
         <!-- Polygon -->
         <polygon points="300,300 325,350 350,325 375,375 400,350 400,300" fill="yellow" />
         <!-- Path -->
-        <path d="M 50 400 L 150 400 L 100 475 Z" fill="purple" />
+        <path d="M50,400 L150,400 L100,475 Z" fill="purple" />
     </g>
 </svg>
