@@ -1,5 +1,4 @@
 @import "/node_modules/reveal.js/dist/reveal.css";
-@import "tippy.js/dist/tippy.css";
 @import "atom-one-dark.css";
 @import "theme.css";
 
@@ -22,10 +21,10 @@
 }
 
 .ag-logo {
-    vertical-align: middle;
+  vertical-align: middle;
 
-    svg:nth-child(2) {
-        position: relative;
-        top: 5px;
-    }
+  svg:nth-child(2) {
+    position: relative;
+    top: 5px;
+  }
 }

@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
+import "tippy.js/dist/tippy.css";
 
 import { Chapter01 } from "./slides/Chapter01";
 import { Chapter02 } from "./slides/Chapter02";
