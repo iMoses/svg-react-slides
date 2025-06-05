@@ -8,7 +8,7 @@ import { Code } from "../utils/helpers";
 export function Chapter07() {
   return (
     <section>
-      <section>
+      <section data-transition="concave">
         <h2>Gauge Chart</h2>
         <Code
           className="language-jsx"
@@ -24,7 +24,7 @@ export function Chapter07() {
         </output>
       </section>
 
-      <section>
+      <section data-transition="concave">
         <h2>Gauge Chart</h2>
         <Code
           className="language-jsx"

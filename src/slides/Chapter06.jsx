@@ -1,4 +1,4 @@
-import { dataset2 } from "../data-1";
+import { dataset2 } from "../data";
 import { Code } from "../utils/helpers";
 import PieChartRaw01 from "../examples/PieChart.01?raw";
 import { PieChart as PieChart01 } from "../examples/PieChart.01";
@@ -10,7 +10,7 @@ import { PieChart as PieChart03 } from "../examples/PieChart.03";
 export function Chapter06() {
   return (
     <section>
-      <section>
+      <section data-transition="convex">
         <h2>PieChart: Base</h2>
         <Code className="language-jsx" data-line-numbers data-trim>
           {PieChartRaw01}
@@ -19,7 +19,8 @@ export function Chapter06() {
           <PieChart01 data={dataset2} />
         </output>
       </section>
-      <section>
+
+      <section data-transition="convex">
         <h2>PieChart: Labels</h2>
         <Code className="language-jsx" data-line-numbers="36" data-trim>
           {PieChartRaw02}
@@ -28,7 +29,8 @@ export function Chapter06() {
           <PieChart02 data={dataset2} />
         </output>
       </section>
-      <section>
+
+      <section data-transition="convex">
         <h2>PieChart: Interactivity</h2>
         <Code
           className="language-jsx"

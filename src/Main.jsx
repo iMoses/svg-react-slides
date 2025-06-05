@@ -26,6 +26,7 @@ function Main() {
     deckRef.current = new Reveal({
       controls: false,
       history: true,
+      navigationMode: "linear",
       plugins: [RevealMarkdown, RevealHighlight],
     });
 

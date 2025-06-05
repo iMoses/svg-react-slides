@@ -1,4 +1,4 @@
-import { dataset1 } from "../data-1";
+import { dataset1 } from "../data";
 import { Code } from "../utils/helpers";
 import LineChartRaw01 from "../examples/LineChart.01?raw";
 import { LineChart as LineChart01 } from "../examples/LineChart.01";
@@ -12,7 +12,7 @@ import { LineChart as LineChart04 } from "../examples/LineChart.04";
 export function Chapter05() {
   return (
     <section>
-      <section>
+      <section data-transition="convex">
         <h2>LineChart: Base</h2>
         <Code
           className="language-jsx"
@@ -25,7 +25,8 @@ export function Chapter05() {
           <LineChart01 data={dataset1} />
         </output>
       </section>
-      <section>
+
+      <section data-transition="convex">
         <h2>LineChart: With Markers</h2>
         <Code className="language-jsx" data-line-numbers="23-27" data-trim>
           {LineChartRaw02}
@@ -34,7 +35,8 @@ export function Chapter05() {
           <LineChart02 data={dataset1} />
         </output>
       </section>
-      <section>
+
+      <section data-transition="convex">
         <h2>LineChart: CSS Animation</h2>
         <Code className="language-jsx" data-line-numbers="25,31-42" data-trim>
           {LineChartRaw03}
@@ -43,7 +45,8 @@ export function Chapter05() {
           <LineChart03 data={dataset1} />
         </output>
       </section>
-      <section>
+
+      <section data-transition="convex">
         <h2>LineChart: Event Handling</h2>
         <Code className="language-jsx" data-line-numbers="31-39" data-trim>
           {LineChartRaw04}
