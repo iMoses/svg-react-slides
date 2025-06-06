@@ -16,9 +16,9 @@ export function LineChart({ data, width = 450, height = 200, padding = 10 }) {
     <svg width={width} height={height}>
       <polyline
         points={points.join(" ")}
-        fill="none"
         stroke="steelblue"
         strokeWidth="2"
+        fill="none"
       />
     </svg>
   );

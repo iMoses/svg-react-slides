@@ -15,7 +15,7 @@ const defaultColors = [
   "#bab0ab",
 ];
 
-export function PieChart({
+export function DonutChart({
   data,
   width = 280,
   height = 280,
@@ -40,12 +40,7 @@ export function PieChart({
     <svg width={width} height={height}>
       <PieGroup transform={`translate(${width / 2},${height / 2})`}>
         {toPie(data).map((d) => (
-          <path
-            key={d.index}
-            d={toArc(d)}
-            r={radius}
-            fill={color(d.data.category)}
-          />
+          <path key={d.index} d={toArc(d)} fill={color(d.data.category)} />
         ))}
       </PieGroup>
     </svg>

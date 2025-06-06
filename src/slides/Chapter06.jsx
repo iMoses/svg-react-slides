@@ -3,25 +3,29 @@ import { Code } from "../utils/helpers";
 import PieChartRaw01 from "../examples/PieChart.01?raw";
 import { PieChart as PieChart01 } from "../examples/PieChart.01";
 import PieChartRaw02 from "../examples/PieChart.02?raw";
-import { PieChart as PieChart02 } from "../examples/PieChart.02";
+import { DonutChart as PieChart02 } from "../examples/PieChart.02";
 import PieChartRaw03 from "../examples/PieChart.03?raw";
-import { PieChart as PieChart03 } from "../examples/PieChart.03";
+import { DonutChart as PieChart03 } from "../examples/PieChart.03";
 
 export function Chapter06() {
   return (
     <section>
       <section data-transition="convex">
-        <h2>PieChart: Base</h2>
-        <Code className="language-jsx" data-line-numbers data-trim>
+        <h2>PieChart</h2>
+        <Code
+          className="language-jsx"
+          data-line-numbers="1-59|24|26-29|31-33|35|38-44|39,48-52"
+          data-trim
+        >
           {PieChartRaw01}
         </Code>
-        <output className="fragment">
+        <output>
           <PieChart01 data={dataset2} />
         </output>
       </section>
 
       <section data-transition="convex">
-        <h2>PieChart: Labels</h2>
+        <h2>DonutChart</h2>
         <Code className="language-jsx" data-line-numbers="36" data-trim>
           {PieChartRaw02}
         </Code>
@@ -31,7 +35,7 @@ export function Chapter06() {
       </section>
 
       <section data-transition="convex">
-        <h2>PieChart: Interactivity</h2>
+        <h2>DonutChart: Interactivity</h2>
         <Code
           className="language-jsx"
           data-line-numbers="43-52|65-74"

@@ -16,6 +16,7 @@ import { Chapter08 } from "./slides/Chapter08";
 import { Chapter09 } from "./slides/Chapter09";
 import { Chapter10 } from "./slides/Chapter10";
 import { Chapter11 } from "./slides/Chapter11";
+import { Chapter12 } from "./slides/Chapter12";
 
 function Main() {
   const deckRef = useRef(null);
@@ -67,6 +68,8 @@ function Main() {
         <Chapter10 />
         {/* Final Slide: Follow Up */}
         <Chapter11 />
+        {/* Bonus Slide */}
+        <Chapter12 />
       </div>
     </div>
   );

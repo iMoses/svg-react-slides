@@ -15,7 +15,7 @@ const defaultColors = [
   "#bab0ab",
 ];
 
-export function PieChart({
+export function DonutChart({
   data,
   width = 280,
   height = 280,

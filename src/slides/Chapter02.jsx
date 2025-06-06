@@ -23,6 +23,48 @@ export function Chapter02() {
           <SvgShapes width={180} height={180} />
         </output>
       </section>
+
+      <section>
+        <h2>SVG ViewBox</h2>
+        <ul>
+          <li className="fragment">Defines the internal coordinate system</li>
+          <li className="fragment">
+            Top-left is (0, 0) — Y increases downward
+            <aside
+              style={{
+                display: "flex",
+                alignItems: "end",
+                textAlign: "center",
+                width: "fit-content",
+                margin: "1em auto",
+              }}
+            >
+              <figure>
+                <img
+                  src="cartesian-coordinates.png"
+                  alt="Cartesian coordinate system"
+                  style={{ margin: "0.5em auto" }}
+                  width={246}
+                  height={228}
+                />
+                <figcaption>Cartesian coordinate system</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="computer-coordinates.png"
+                  alt="SVG coordinate system"
+                  style={{ margin: "0.5em auto" }}
+                  width={267}
+                  height={194}
+                />
+                <figcaption>SVG coordinate system</figcaption>
+              </figure>
+            </aside>
+          </li>
+          <li className="fragment">Use it to scale or reposition the origin</li>
+        </ul>
+      </section>
+
       <section>
         <h2>Why Not Canvas?</h2>
         <ul>
