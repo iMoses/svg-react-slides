@@ -42,9 +42,9 @@ export function Chapter01() {
         <h2>Downsides of Using a Library</h2>
         <ul>
           <li className="fragment">Unnecessary weight</li>
+          <li className="fragment">Cognitive overhead</li>
           <li className="fragment">Pre-baked assumptions</li>
           <li className="fragment">Debugging friction</li>
-          <li className="fragment">Cognitive overhead</li>
           <li className="fragment">Overkill for basic cases</li>
         </ul>
       </section>
@@ -56,8 +56,8 @@ export function Chapter01() {
           <DonutChart data={dataset2} />
           <GaugeChart value="87" label="Benchmark" />
         </output>
-        <p className="fragment">Let’s break it down step by step.</p>
-        <p className="fragment">No libraries. Just SVG and React.</p>
+        <p>No rendering libraries.</p>
+        <p>Just SVG and React.</p>
       </section>
     </section>
   );
