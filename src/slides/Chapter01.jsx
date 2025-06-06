@@ -56,8 +56,6 @@ export function Chapter01() {
           <DonutChart data={dataset2} />
           <GaugeChart value="87" label="Benchmark" />
         </output>
-        <p>No rendering libraries.</p>
-        <p>Just SVG and React.</p>
       </section>
     </section>
   );

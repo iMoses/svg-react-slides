@@ -12,7 +12,7 @@ export function Chapter07() {
         <h2>GaugeChart: Valve</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-34|4-7|10-11,31-32|12-18|20-25|27-30"
+          data-line-numbers="1-32|4-7|10|11-17|19-24|26-29"
           data-trim
         >
           {GaugeChartRaw01}
