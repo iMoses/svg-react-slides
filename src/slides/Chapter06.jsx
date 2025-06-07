@@ -19,7 +19,7 @@ export function Chapter06() {
         </Code>
         <output>
           <NumberGenerator end={100} round>
-            {(value) => <GaugeChart01 value={value} label="Benchmark" />}
+            {(value) => <GaugeChart01 value={value} />}
           </NumberGenerator>
         </output>
       </section>
@@ -28,7 +28,7 @@ export function Chapter06() {
         <h2>GaugeChart: Benchmark</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-79|20-23|25-28|31,56-59|32-48,54|49|50-53|13-61"
+          data-line-numbers="1-82|23-26|28-31|34,59-62|35-51,57|52|53-56|21,38"
           data-trim
         >
           {GaugeChartRaw02}

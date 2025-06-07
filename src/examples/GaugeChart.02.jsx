@@ -1,5 +1,6 @@
 import { scaleLinear } from "d3-scale";
 import { arc } from "d3-shape";
+import { useId } from "react";
 import styled from "styled-components";
 
 const defaultGradientSteps = [
@@ -17,6 +18,8 @@ export function GaugeChart({
   end = 100,
   gradientSteps = defaultGradientSteps,
 }) {
+  const id = useId();
+
   const angleScale = scaleLinear()
     .domain([start, end])
     .range([-Math.PI / 2, Math.PI / 2])
@@ -32,7 +35,7 @@ export function GaugeChart({
       <svg width="200" viewBox="-1 -1 2 1">
         <defs>
           <linearGradient
-            id="gauge-gradient"
+            id={`gauge-gradient-${id}`}
             gradientUnits="userSpaceOnUse"
             x1="-1"
             x2="1"
@@ -49,7 +52,7 @@ export function GaugeChart({
         <path d={gaugeArc({ endAngle: Math.PI / 2 })} fill="#dbdbe7" />
         <path
           d={gaugeArc({ endAngle: angleScale(value) })}
-          fill="url(#gauge-gradient)"
+          fill={`url(#gauge-gradient-${id})`}
         />
       </svg>
 

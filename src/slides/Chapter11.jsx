@@ -1,7 +1,7 @@
 import NumberGeneratorRaw from "../utils/NumberGenerator?raw";
 import SmoothTransitionRaw from "../utils/useSmoothTransition?raw";
 import Chapter06Raw from "./Chapter06?raw";
-import { GaugeChart } from "../examples/GaugeChart.01";
+import { GaugeChart } from "../examples/GaugeChart.02";
 import { NumberGenerator } from "../utils/NumberGenerator";
 import { Code } from "../utils/helpers";
 
@@ -12,7 +12,7 @@ export function Chapter11() {
         <h2>useSmoothTransition Hook</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-32|9|12|14-15|16-26|17|19-22|24|28"
+          data-line-numbers="1-32|9|12|14-15|16-26|17|19-22|24|28|31"
           data-trim
         >
           {SmoothTransitionRaw}
