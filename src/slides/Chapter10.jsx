@@ -6,18 +6,19 @@ export function Chapter10() {
       <h2>Explore the Code</h2>
       <p>github.com/iMoses/svg-react-slides</p>
       <p>
-        <img src="qr-code.svg" alt="QR" width={120} />
+        <img src="qr-code.svg" alt="QR" height={120} />
       </p>
       <p>
+        Ido Moshe <br />
         <AgChartsLogo />
       </p>
       <p
         style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 16,
           fontSize: 24,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 16,
         }}
       >
         This slideshow was created using

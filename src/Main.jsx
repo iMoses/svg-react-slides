@@ -45,27 +45,27 @@ function Main() {
   return (
     <div className="reveal">
       <div className="slides">
-        {/* Intro Section */}
+        {/* Intro */}
         <Chapter01 />
-        {/* SVG Basics */}
+        {/* SVG */}
         <Chapter02 />
-        {/* d3 Section */}
+        {/* d3 */}
         <Chapter03 />
-        {/* LineChart Progression */}
+        {/* LineChart */}
         <Chapter04 />
-        {/* PieChart Progression */}
+        {/* PieChart */}
         <Chapter05 />
-        {/* Bonus: Gauge Chart */}
+        {/* GaugeChart */}
         <Chapter06 />
-        {/* Limitations Section */}
+        {/* Limitations */}
         <Chapter07 />
-        {/* ag-Charts Mention */}
+        {/* ag-Charts */}
         <Chapter08 />
         {/* Closing */}
         <Chapter09 />
-        {/* Final Slide: Follow Up */}
+        {/* Final */}
         <Chapter10 />
-        {/* Bonus Slide */}
+        {/* Bonus */}
         <Chapter11 />
       </div>
     </div>
