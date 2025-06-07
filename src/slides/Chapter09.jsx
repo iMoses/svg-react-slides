@@ -1,12 +1,14 @@
 export function Chapter09() {
   return (
     <section>
-      <h2>Need More Power?</h2>
-      <p className="fragment">
-        When things get serious — performance, flexibility, or team scale — use
-        a battle-tested tool like <strong>ag-Charts</strong>.
-      </p>
-      <p className="fragment">It's what I work on, and it's open-source.</p>
+      <h2>Closing Thoughts</h2>
+      <ul>
+        <li className="fragment">
+          Charting is a great way to learn React + SVG
+        </li>
+        <li className="fragment">Reach for a library only when you need to</li>
+        <li className="fragment">Simple solutions go a long way</li>
+      </ul>
     </section>
   );
 }

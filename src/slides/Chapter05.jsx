@@ -1,61 +1,50 @@
-import { dataset1 } from "../data";
+import { dataset2 } from "../data";
 import { Code } from "../utils/helpers";
-import LineChartRaw01 from "../examples/LineChart.01?raw";
-import { LineChart as LineChart01 } from "../examples/LineChart.01";
-import LineChartRaw02 from "../examples/LineChart.02?raw";
-import { LineChart as LineChart02 } from "../examples/LineChart.02";
-import LineChartRaw03 from "../examples/LineChart.03?raw";
-import { LineChart as LineChart03 } from "../examples/LineChart.03";
-import LineChartRaw04 from "../examples/LineChart.04?raw";
-import { LineChart as LineChart04 } from "../examples/LineChart.04";
+import PieChartRaw01 from "../examples/PieChart.01?raw";
+import { PieChart as PieChart01 } from "../examples/PieChart.01";
+import PieChartRaw02 from "../examples/PieChart.02?raw";
+import { DonutChart as PieChart02 } from "../examples/PieChart.02";
+import PieChartRaw03 from "../examples/PieChart.03?raw";
+import { DonutChart as PieChart03 } from "../examples/PieChart.03";
 
 export function Chapter05() {
   return (
     <section>
       <section data-transition="convex">
-        <h2>LineChart: Base</h2>
+        <h2>PieChart</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-25|5-7|9-11|13|16-23"
+          data-line-numbers="1-59|24|26-29|31-33|35|38-44|39,48-52"
           data-trim
         >
-          {LineChartRaw01}
+          {PieChartRaw01}
         </Code>
-        <output className="fragment">
-          <LineChart01 data={dataset1} />
+        <output>
+          <PieChart01 data={dataset2} />
         </output>
       </section>
 
       <section data-transition="convex">
-        <h2>LineChart: With Markers</h2>
-        <Code className="language-jsx" data-line-numbers="23-27" data-trim>
-          {LineChartRaw02}
+        <h2>DonutChart</h2>
+        <Code className="language-jsx" data-line-numbers="36" data-trim>
+          {PieChartRaw02}
         </Code>
         <output>
-          <LineChart02 data={dataset1} />
+          <PieChart02 data={dataset2} />
         </output>
       </section>
 
       <section data-transition="convex">
-        <h2>LineChart: CSS Animation</h2>
-        <Code className="language-jsx" data-line-numbers="25,31-42" data-trim>
-          {LineChartRaw03}
+        <h2>DonutChart: Interactivity</h2>
+        <Code
+          className="language-jsx"
+          data-line-numbers="43-52|65-74"
+          data-trim
+        >
+          {PieChartRaw03}
         </Code>
         <output>
-          <LineChart03 data={dataset1} />
-        </output>
-      </section>
-
-      <section data-transition="convex">
-        <h2>LineChart: Event Handling</h2>
-        <Code className="language-jsx" data-line-numbers="31-39" data-trim>
-          {LineChartRaw04}
-        </Code>
-        <output>
-          <LineChart04
-            data={dataset1}
-            onClick={(d) => alert(JSON.stringify(d, null, 2))}
-          />
+          <PieChart03 data={dataset2} />
         </output>
       </section>
     </section>

@@ -1,63 +1,62 @@
+import { dataset1 } from "../data";
+import { Code } from "../utils/helpers";
+import LineChartRaw01 from "../examples/LineChart.01?raw";
+import { LineChart as LineChart01 } from "../examples/LineChart.01";
+import LineChartRaw02 from "../examples/LineChart.02?raw";
+import { LineChart as LineChart02 } from "../examples/LineChart.02";
+import LineChartRaw03 from "../examples/LineChart.03?raw";
+import { LineChart as LineChart03 } from "../examples/LineChart.03";
+import LineChartRaw04 from "../examples/LineChart.04?raw";
+import { LineChart as LineChart04 } from "../examples/LineChart.04";
+
 export function Chapter04() {
   return (
     <section>
-      <section>
-        <h2>What is d3 Good At?</h2>
-        <ul>
-          <li className="fragment">Data → Geometry</li>
-          <li className="fragment">Scales and transforms</li>
-          <li className="fragment">
-            Shape generators (e.g. <code>line</code>, <code>arc</code>)
-          </li>
-          <li className="fragment">
-            Layout algorithms (e.g. <code>stack</code>, <code>pie</code>)
-          </li>
-        </ul>
+      <section data-transition="convex">
+        <h2>LineChart: Base</h2>
+        <Code
+          className="language-jsx"
+          data-line-numbers="1-25|5-7|9-11|13|16-23"
+          data-trim
+        >
+          {LineChartRaw01}
+        </Code>
+        <output className="fragment">
+          <LineChart01 data={dataset1} />
+        </output>
       </section>
 
-      <section>
-        <h2>Using d3 in React</h2>
-        <p>d3 can do the math — React can render the DOM.</p>
-        <ul>
-          <li className="fragment">Avoid letting d3 mutate the DOM</li>
-          <li className="fragment">Use d3 utilities for calculations only</li>
-          <li className="fragment">
-            Render everything declaratively with React
-          </li>
-        </ul>
+      <section data-transition="convex">
+        <h2>LineChart: With Markers</h2>
+        <Code className="language-jsx" data-line-numbers="23-27" data-trim>
+          {LineChartRaw02}
+        </Code>
+        <output>
+          <LineChart02 data={dataset1} />
+        </output>
       </section>
 
-      <section>
-        <h2>Core d3 Tools We Use</h2>
-        <ul>
-          <li className="fragment">
-            <code>scaleLinear</code> – map data to pixels
-          </li>
-          <li className="fragment">
-            <code>line</code> – generate SVG paths from points
-          </li>
-          <li className="fragment">
-            <code>arc</code> – generate arcs and sectors
-          </li>
-          <li className="fragment">
-            <code>pie</code> – compute angles for pie charts
-          </li>
-        </ul>
+      <section data-transition="convex">
+        <h2>LineChart: CSS Animation</h2>
+        <Code className="language-jsx" data-line-numbers="25,31-42" data-trim>
+          {LineChartRaw03}
+        </Code>
+        <output>
+          <LineChart03 data={dataset1} />
+        </output>
       </section>
 
-      <section>
-        <h2>d3 in This Talk</h2>
-        <ul>
-          <li className="fragment">
-            Line chart: <code>scaleLinear</code> + <code>line</code>
-          </li>
-          <li className="fragment">
-            Pie chart: <code>pie</code> + <code>arc</code>
-          </li>
-          <li className="fragment">
-            Gauge chart: <code>scaleLinear</code> to rotate the needle
-          </li>
-        </ul>
+      <section data-transition="convex">
+        <h2>LineChart: Event Handling</h2>
+        <Code className="language-jsx" data-line-numbers="31-39" data-trim>
+          {LineChartRaw04}
+        </Code>
+        <output>
+          <LineChart04
+            data={dataset1}
+            onClick={(d) => alert(JSON.stringify(d, null, 2))}
+          />
+        </output>
       </section>
     </section>
   );

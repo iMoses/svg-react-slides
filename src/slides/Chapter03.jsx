@@ -7,7 +7,7 @@ export function Chapter03() {
   return (
     <section>
       <section>
-        <h2>d3 as a utility library</h2>
+        <h2>What is d3 Good At?</h2>
         <ul>
           <li className="fragment">
             A collection of utilities for working with data
@@ -47,7 +47,7 @@ export function Chapter03() {
       <section>
         <h3>React and d3</h3>
         <h2>How it should be done</h2>
-        <Code className="language-jsx" data-line-numbers="10-32|35-51">
+        <Code className="language-jsx" data-line-numbers="10-30|33-49">
           {D3AntiPatternAltRaw}
         </Code>
       </section>
@@ -60,6 +60,21 @@ export function Chapter03() {
         >
           {d3Index}
         </Code>
+      </section>
+
+      <section>
+        <h2>d3 in This Talk</h2>
+        <ul>
+          <li className="fragment">
+            <code>d3-array</code>: to get our data domain boundaries
+          </li>
+          <li className="fragment">
+            <code>d3-scale</code>: maps data values to visual values
+          </li>
+          <li className="fragment">
+            <code>d3-shape</code>: generates paths for arcs and pies
+          </li>
+        </ul>
       </section>
     </section>
   );

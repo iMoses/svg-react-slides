@@ -1,50 +1,42 @@
-import { dataset2 } from "../data";
+import GaugeChartRaw01 from "../examples/GaugeChart.01?raw";
+import { GaugeChart as GaugeChart01 } from "../examples/GaugeChart.01";
+import GaugeChartRaw02 from "../examples/GaugeChart.02?raw";
+import { GaugeChart as GaugeChart02 } from "../examples/GaugeChart.02";
+import { NumberGenerator } from "../utils/NumberGenerator";
 import { Code } from "../utils/helpers";
-import PieChartRaw01 from "../examples/PieChart.01?raw";
-import { PieChart as PieChart01 } from "../examples/PieChart.01";
-import PieChartRaw02 from "../examples/PieChart.02?raw";
-import { DonutChart as PieChart02 } from "../examples/PieChart.02";
-import PieChartRaw03 from "../examples/PieChart.03?raw";
-import { DonutChart as PieChart03 } from "../examples/PieChart.03";
 
 export function Chapter06() {
   return (
     <section>
-      <section data-transition="convex">
-        <h2>PieChart</h2>
+      <section data-transition="concave">
+        <h2>GaugeChart: Valve</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-59|24|26-29|31-33|35|38-44|39,48-52"
+          data-line-numbers="1-32|4-7|10|11-17|19-24|26-29"
           data-trim
         >
-          {PieChartRaw01}
+          {GaugeChartRaw01}
         </Code>
         <output>
-          <PieChart01 data={dataset2} />
+          <NumberGenerator end={100} round>
+            {(value) => <GaugeChart01 value={value} label="Benchmark" />}
+          </NumberGenerator>
         </output>
       </section>
 
-      <section data-transition="convex">
-        <h2>DonutChart</h2>
-        <Code className="language-jsx" data-line-numbers="36" data-trim>
-          {PieChartRaw02}
-        </Code>
-        <output>
-          <PieChart02 data={dataset2} />
-        </output>
-      </section>
-
-      <section data-transition="convex">
-        <h2>DonutChart: Interactivity</h2>
+      <section data-transition="concave">
+        <h2>GaugeChart: Benchmark</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="43-52|65-74"
+          data-line-numbers="1-79|20-23|25-28|31,56-59|32-48,54|49|50-53|13-61"
           data-trim
         >
-          {PieChartRaw03}
+          {GaugeChartRaw02}
         </Code>
         <output>
-          <PieChart03 data={dataset2} />
+          <NumberGenerator end={100} round>
+            {(value) => <GaugeChart02 value={value} label="Benchmark" />}
+          </NumberGenerator>
         </output>
       </section>
     </section>

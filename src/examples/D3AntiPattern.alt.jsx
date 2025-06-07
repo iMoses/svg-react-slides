@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import * as d3 from "d3";
+import { scaleBand, scaleLinear } from "d3-scale";
 
 export default function BarChart({
   data,
@@ -11,14 +11,12 @@ export default function BarChart({
     const innerWidth = width - padding * 2;
     const innerHeight = height - padding * 2;
 
-    const x = d3
-      .scaleBand()
+    const x = scaleBand()
       .domain(data.map((d) => d.label))
       .range([0, innerWidth])
       .padding(0.2);
 
-    const y = d3
-      .scaleLinear()
+    const y = scaleLinear()
       .domain([0, d3.max(data, (d) => d.value)])
       .range([innerHeight, 0]);
 

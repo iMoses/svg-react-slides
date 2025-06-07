@@ -16,7 +16,6 @@ import { Chapter08 } from "./slides/Chapter08";
 import { Chapter09 } from "./slides/Chapter09";
 import { Chapter10 } from "./slides/Chapter10";
 import { Chapter11 } from "./slides/Chapter11";
-import { Chapter12 } from "./slides/Chapter12";
 
 function Main() {
   const deckRef = useRef(null);
@@ -50,26 +49,24 @@ function Main() {
         <Chapter01 />
         {/* SVG Basics */}
         <Chapter02 />
-        {/* d3 Overview and Anti-Pattern */}
-        <Chapter03 />
         {/* d3 Section */}
-        <Chapter04 />
+        <Chapter03 />
         {/* LineChart Progression */}
-        <Chapter05 />
+        <Chapter04 />
         {/* PieChart Progression */}
-        <Chapter06 />
+        <Chapter05 />
         {/* Bonus: Gauge Chart */}
-        <Chapter07 />
+        <Chapter06 />
         {/* Limitations Section */}
-        <Chapter08 />
+        <Chapter07 />
         {/* ag-Charts Mention */}
-        <Chapter09 />
+        <Chapter08 />
         {/* Closing */}
-        <Chapter10 />
+        <Chapter09 />
         {/* Final Slide: Follow Up */}
-        <Chapter11 />
+        <Chapter10 />
         {/* Bonus Slide */}
-        <Chapter12 />
+        <Chapter11 />
       </div>
     </div>
   );

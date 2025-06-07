@@ -1,44 +1,13 @@
-import GaugeChartRaw01 from "../examples/GaugeChart.01?raw";
-import { GaugeChart as GaugeChart01 } from "../examples/GaugeChart.01";
-import GaugeChartRaw02 from "../examples/GaugeChart.02?raw";
-import { GaugeChart as GaugeChart02 } from "../examples/GaugeChart.02";
-import { NumberGenerator } from "../utils/NumberGenerator";
-import { Code } from "../utils/helpers";
-
 export function Chapter07() {
   return (
     <section>
-      <section data-transition="concave">
-        <h2>GaugeChart: Valve</h2>
-        <Code
-          className="language-jsx"
-          data-line-numbers="1-32|4-7|10|11-17|19-24|26-29"
-          data-trim
-        >
-          {GaugeChartRaw01}
-        </Code>
-        <output>
-          <NumberGenerator end={100} round>
-            {(value) => <GaugeChart01 value={value} label="Benchmark" />}
-          </NumberGenerator>
-        </output>
-      </section>
-
-      <section data-transition="concave">
-        <h2>GaugeChart: Benchmark</h2>
-        <Code
-          className="language-jsx"
-          data-line-numbers="1-79|20-23|25-28|31,56-59|32-48,54|49|50-53|13-61"
-          data-trim
-        >
-          {GaugeChartRaw02}
-        </Code>
-        <output>
-          <NumberGenerator end={100} round>
-            {(value) => <GaugeChart02 value={value} label="Benchmark" />}
-          </NumberGenerator>
-        </output>
-      </section>
+      <h2>When Simplicity Isn't Enough</h2>
+      <ul>
+        <li className="fragment">Very large datasets</li>
+        <li className="fragment">High interactivity or animation needs</li>
+        <li className="fragment">Accessibility and i18n</li>
+        <li className="fragment">Time and team scale</li>
+      </ul>
     </section>
   );
 }
