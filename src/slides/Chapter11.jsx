@@ -8,7 +8,7 @@ import { Code } from "../utils/helpers";
 export function Chapter11() {
   return (
     <section>
-      <section data-transition="concave">
+      <section data-visibility="uncounted" data-transition="concave">
         <h2>useSmoothTransition Hook</h2>
         <Code
           className="language-jsx"
@@ -19,7 +19,7 @@ export function Chapter11() {
         </Code>
       </section>
 
-      <section data-transition="concave">
+      <section data-visibility="uncounted" data-transition="concave">
         <h2>NumberGenerator Component</h2>
         <Code
           className="language-jsx"
@@ -30,7 +30,7 @@ export function Chapter11() {
         </Code>
       </section>
 
-      <section data-transition="concave">
+      <section data-visibility="uncounted" data-transition="concave">
         <h2>Gauge Slides</h2>
         <Code
           className="language-jsx"
