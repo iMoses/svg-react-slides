@@ -59,6 +59,7 @@ export function Chapter02() {
         </aside>
 
         <ul>
+          <li className="fragment">Sets the visible region of the canvas</li>
           <li className="fragment">
             Top-left is (0, 0) - Y increases downward
           </li>
