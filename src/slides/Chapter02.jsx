@@ -77,17 +77,3 @@ export function Chapter02() {
     </section>
   );
 }
-
-const CodeGallery = styled.div`
-  display: flex;
-  align-items: end;
-
-  > div {
-    flex: 1 0 auto;
-  }
-
-  svg {
-    outline: 1px solid black;
-    background-color: #fff;
-  }
-`;

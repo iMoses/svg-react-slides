@@ -25,7 +25,8 @@ export default function BarChart({
       .range([innerHeight, 0]);
 
     d3.select(ref.current)
-      .attr("viewBox", `0 0 400 200`)
+      .attr("width", width)
+      .attr("height", height)
       .append("g")
       .attr("transform", `translate(${padding},${padding})`)
       .selectAll("rect")
@@ -38,5 +39,5 @@ export default function BarChart({
       .attr("fill", "steelblue");
   }, []);
 
-  return <svg ref={ref} style={{ width: "100%", height: "auto" }} />;
+  return <svg ref={ref} />;
 }

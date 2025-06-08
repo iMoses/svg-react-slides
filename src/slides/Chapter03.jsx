@@ -1,6 +1,7 @@
 import d3Index from "d3?raw";
 import D3AntiPatternRaw from "../examples/D3AntiPattern?raw";
 import D3AntiPatternAltRaw from "../examples/D3AntiPattern.alt?raw";
+import D3AntiPatternAlt from "../examples/D3AntiPattern.alt";
 import { Code } from "../utils/helpers";
 
 export function Chapter03() {
@@ -19,11 +20,11 @@ export function Chapter03() {
 
       <section>
         <h3>React and d3</h3>
-        <h2>The Anti-Pattern</h2>
+        <h2>A Common Pitfall</h2>
         <div>
           <Code
             className="language-jsx"
-            data-line-numbers="1-45|10|41|12,27-38|13-25"
+            data-line-numbers="1-43|10|42|12,27-39|13-25"
           >
             {D3AntiPatternRaw}
           </Code>
@@ -37,19 +38,25 @@ export function Chapter03() {
           Letting d3 take over the DOM means React becomes a wrapper and a
           liability.
         </p>
-        <ul>
-          <li className="fragment">Hard to test</li>
-          <li className="fragment">Breaks React assumptions</li>
-          <li className="fragment">Leads to magic side effects</li>
-        </ul>
       </section>
 
       <section>
         <h3>React and d3</h3>
-        <h2>How it should be done</h2>
-        <Code className="language-jsx" data-line-numbers="10-30|33-49">
+        <h2>The React Way</h2>
+        <Code className="language-jsx" data-line-numbers="10-29|32-38">
           {D3AntiPatternAltRaw}
         </Code>
+        <output className="fragment">
+          <D3AntiPatternAlt
+            data={[
+              { label: "Apples", value: 10 },
+              { label: "Oranges", value: 15 },
+              { label: "Bananas", value: 7 },
+              { label: "Kiwis", value: 12 },
+              { label: "Pears", value: 9 },
+            ]}
+          />
+        </output>
       </section>
 
       <section data-transition="concave">

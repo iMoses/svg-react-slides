@@ -5,11 +5,11 @@ import styled from "styled-components";
 export function LineChart({ data, width = 450, height = 200, padding = 10 }) {
   const scaleX = scaleLinear()
     .domain(extent(data.map((d) => d.year)))
-    .rangeRound([padding, width - padding * 2]);
+    .rangeRound([padding, width - padding]);
 
   const scaleY = scaleLinear()
     .domain(extent(data.map((d) => d.sales)))
-    .rangeRound([height - padding * 2, padding]);
+    .rangeRound([height - padding, padding]);
 
   const points = data.map((d) => [scaleX(d.year), scaleY(d.sales)]);
 

@@ -13,7 +13,7 @@ export function Chapter04() {
   return (
     <section>
       <section data-transition="convex">
-        <h2>LineChart: Base</h2>
+        <h2>LineChart: Simple</h2>
         <Code
           className="language-jsx"
           data-line-numbers="1-25|5-7|9-11|13|16-23"

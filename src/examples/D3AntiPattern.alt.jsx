@@ -17,7 +17,7 @@ export default function BarChart({
       .padding(0.2);
 
     const y = scaleLinear()
-      .domain([0, d3.max(data, (d) => d.value)])
+      .domain([0, Math.max(...data.map((d) => d.value))])
       .range([innerHeight, 0]);
 
     return data.map((d) => ({
@@ -25,25 +25,14 @@ export default function BarChart({
       y: y(d.value),
       width: x.bandwidth(),
       height: innerHeight - y(d.value),
-      label: d.label,
     }));
-  }, [data]);
+  }, [data, width, height, padding]);
 
   return (
-    <svg
-      viewBox={`0 0 ${width} ${height}`}
-      style={{ width: "100%", height: "auto" }}
-    >
+    <svg width={width} height={height}>
       <g transform={`translate(${padding},${padding})`}>
         {bars.map((bar, i) => (
-          <rect
-            key={i}
-            x={bar.x}
-            y={bar.y}
-            width={bar.width}
-            height={bar.height}
-            fill="steelblue"
-          />
+          <rect key={i} fill="steelblue" {...bar} />
         ))}
       </g>
     </svg>
