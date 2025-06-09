@@ -63,7 +63,7 @@ export function Chapter02() {
           <li className="fragment">
             Top-left is (0, 0) - Y increases downward
           </li>
-          <li className="fragment">Use to scale or reposition the origin</li>
+          <li className="fragment">Use ViewBox to scale or reposition the origin</li>
         </ul>
       </section>
 

@@ -1,6 +1,6 @@
 import NumberGeneratorRaw from "../utils/NumberGenerator?raw";
 import SmoothTransitionRaw from "../utils/useSmoothTransition?raw";
-import Chapter06Raw from "./Chapter06?raw";
+import Chapter11Raw from "./Chapter11?raw";
 import { GaugeChart } from "../examples/GaugeChart.02";
 import { NumberGenerator } from "../utils/NumberGenerator";
 import { Code } from "../utils/helpers";
@@ -34,10 +34,10 @@ export function Chapter11() {
         <h2>Gauge Slides</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="21-23,37-39"
+          data-line-numbers="43-45"
           data-trim
         >
-          {Chapter06Raw}
+          {Chapter11Raw}
         </Code>
         <output>
           <NumberGenerator end={100} round>

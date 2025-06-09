@@ -44,7 +44,6 @@ export function Chapter01() {
           <li className="fragment">Unnecessary weight</li>
           <li className="fragment">Cognitive overhead</li>
           <li className="fragment">Pre-baked assumptions</li>
-          <li className="fragment">Debugging friction</li>
           <li className="fragment">Overkill for basic cases</li>
         </ul>
       </section>
