@@ -29,7 +29,7 @@ export function LineChart({
         strokeWidth="2"
       />
       {points.map(([cx, cy], i) => (
-        <Tippy key={i} content={data[i].sales}>
+        <Tippy key={i} content={data[i].sales.toLocaleString()}>
           <Marker
             cx={cx}
             cy={cy}
