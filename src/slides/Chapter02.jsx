@@ -27,20 +27,11 @@ export function Chapter02() {
 
       <section>
         <h2>SVG: ViewBox</h2>
-        <aside
-          style={{
-            display: "flex",
-            alignItems: "end",
-            textAlign: "center",
-            width: "fit-content",
-            margin: "1em auto",
-          }}
-        >
+        <FigurePanel>
           <figure>
             <img
               src="cartesian-coordinates.png"
               alt="Cartesian coordinate system"
-              style={{ margin: "0.5em auto" }}
               width={246}
               height={228}
             />
@@ -50,20 +41,21 @@ export function Chapter02() {
             <img
               src="computer-coordinates.png"
               alt="SVG coordinate system"
-              style={{ margin: "0.5em auto" }}
               width={267}
               height={194}
             />
             <figcaption>SVG coordinate system</figcaption>
           </figure>
-        </aside>
+        </FigurePanel>
 
         <ul>
-          <li className="fragment">Sets the visible region of the canvas</li>
           <li className="fragment">
             Top-left is (0, 0) - Y increases downward
           </li>
-          <li className="fragment">Use ViewBox to scale or reposition the origin</li>
+          <li className="fragment">Sets the visible region of the canvas</li>
+          <li className="fragment">
+            Use ViewBox to scale or reposition the origin
+          </li>
         </ul>
       </section>
 
@@ -78,3 +70,15 @@ export function Chapter02() {
     </section>
   );
 }
+
+const FigurePanel = styled.aside`
+  display: flex;
+  align-items: end;
+  text-align: center;
+  width: fit-content;
+  margin: 1em auto;
+
+  img {
+    margin: 0.5em auto;
+  }
+`;
