@@ -28,7 +28,7 @@ export function Chapter06() {
         <h2>GaugeChart: Benchmark</h2>
         <Code
           className="language-jsx"
-          data-line-numbers="1-82|23-26|28-31|35-51,57|52|53-56|34,59-62|21,38"
+          data-line-numbers="1-82|23-26|28-31|35-51,57|52|53-56|34,59-62"
           data-trim
         >
           {GaugeChartRaw02}

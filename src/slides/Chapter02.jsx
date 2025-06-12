@@ -72,13 +72,15 @@ export function Chapter02() {
 }
 
 const FigurePanel = styled.aside`
-  display: flex;
-  align-items: end;
-  text-align: center;
-  width: fit-content;
-  margin: 1em auto;
+  .reveal & {
+    display: flex;
+    align-items: end;
+    text-align: center;
+    width: fit-content;
+    margin: 1em auto;
 
-  img {
-    margin: 0.5em auto;
+    img {
+      margin: 0.5em auto;
+    }
   }
 `;
