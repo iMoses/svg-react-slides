@@ -46,13 +46,7 @@ function Main() {
   return (
     <div className="reveal">
       <div className="slides">
-        <AgChartsLogo
-          style={{
-            position: "absolute",
-            top: 16,
-            left: 16,
-          }}
-        />
+        <AgChartsLogo />
         {/* Intro */}
         <Chapter01 />
         {/* SVG */}
