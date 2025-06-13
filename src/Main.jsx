@@ -5,6 +5,7 @@ import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 import "tippy.js/dist/tippy.css";
 
+import { AgChartsLogo } from "./utils/helpers";
 import { Chapter01 } from "./slides/Chapter01";
 import { Chapter02 } from "./slides/Chapter02";
 import { Chapter03 } from "./slides/Chapter03";
@@ -45,6 +46,13 @@ function Main() {
   return (
     <div className="reveal">
       <div className="slides">
+        <AgChartsLogo
+          style={{
+            position: "absolute",
+            top: 16,
+            left: 16,
+          }}
+        />
         {/* Intro */}
         <Chapter01 />
         {/* SVG */}

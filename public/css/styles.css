@@ -44,4 +44,12 @@
     position: relative;
     top: 5px;
   }
+
+  .slides > & {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
 }
